@@ -1,0 +1,26 @@
+{% extends "calculators/base.html" %}
+
+
+{% block bmi %}
+
+    <form action="{% url 'calculators:count_bmi' %}" method="post">
+    {% csrf_token %}
+
+    <div id="bmi_form" style="text-align:center; background-color:lightgreen; background-size: 50% 80%;">
+
+        <br>
+        <h3>Kalkulator ilosci uczniow po swietach</h3>
+
+        <p>Wprowadz ilosc uczniow przed swietami.</p>
+        <input type="text" name="baza_uczniow" value="" size="10" style="text-align:center;">
+		<br>
+
+        <p><input type="submit" value="Oblicz ilosc"></p>
+        <br>
+    </div>
+    </form>
+
+    {% block bmi_results %}
+    {% endblock %}
+
+{% endblock %}

@@ -1,0 +1,16 @@
+li a {
+    color: green;
+}
+
+body {
+    background: white url("images/tumblr_static_palm_trees1.jpg") no-repeat right top;
+
+    text-align:center;
+    position: relative;
+    width: 60%;
+    left: 20%;
+}
+
+header, footer {
+    background-color:whitesmoke;
+}

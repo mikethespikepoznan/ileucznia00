@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html lang="pl">
+
+    <head>
+        {% load static %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+    </head>
+
+    <body>
+    <header>
+      <h1>Application polls</h1>
+    </header>
+
+{% block polls %}
+{% endblock %}
+
+
+<footer>
+  <h6>Voting is fun!</h6>
+</footer>
+
+</body>
+</html>

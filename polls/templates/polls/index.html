@@ -1,0 +1,17 @@
+{% extends "polls/base.html" %}
+
+{% block polls %}
+
+{% if latest_question_list %}
+    <div style="align: centered; border: 3px solid #73AD21; width: 250px;">
+    <ul style="text-align: left">
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+{% endblock %}
